@@ -41,9 +41,15 @@ export default function Ciclo() {
 		setSubjects(subjects.filter((subject) => subject.id !== id));
 	}
 
+	const totalMinutes = subjects.reduce((acc, subject) => acc + subject.durationMinutes, 0);
+	const cycleStatus = totalMinutes > 60 ? "Carga Alta" : "Carga Baixa";
+
 	return (
 		<div className=" flex flex-col gap-4">
 			<h1>Meu Ciclo</h1>
+			<span className="text-sm text-gray-500">
+				Total: {totalMinutes} min - {cycleStatus}
+			</span>
 			<div className="flex gap-2 mb-4">
 				<input
 					type="text"
