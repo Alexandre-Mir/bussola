@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CycleSubject } from "@/types";
+
+const STORAGE_KEY = "bussola_cycle_subjects";
 
 export default function Ciclo() {
 	const [subjects, setSubjects] = useState<CycleSubject[]>([
@@ -10,6 +12,17 @@ export default function Ciclo() {
 	]);
 	const [newName, setNewName] = useState("");
 	const [newDuration, setNewDuration] = useState<number | string>(60);
+
+	useEffect(() => {
+		const saved = localStorage.getItem(STORAGE_KEY);
+		if (saved) {
+			setSubjects(JSON.parse(saved));
+		}
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem(STORAGE_KEY, JSON.stringify(subjects));
+	}, [subjects]);
 
 	function handleAddSubject() {
 		if (newName.trim() === "" || newDuration === "") return;
