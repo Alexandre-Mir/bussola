@@ -91,6 +91,14 @@ export default function Ciclo() {
     });
   }
 
+  function formatTime(seconds: number) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
+      .toString()
+      .padStart(2, "0")}`;
+  }
+
   return (
     <div className=" flex flex-col gap-4">
       <h1>Meu Ciclo</h1>
@@ -123,11 +131,18 @@ export default function Ciclo() {
         <div key={subject.id} className="card bg-base-100 shadow-sm border p-4">
           <strong>{subject.name}</strong>
           <p>{subject.durationMinutes}</p>
+          <p>{formatTime(subject.elapsedSeconds)}</p>
           <button
             className="btn btn-error btn-xs"
             onClick={() => handleDelete(subject.id)}
           >
             Excluir
+          </button>
+          <button
+            className="btn "
+            onClick={() => handleToggleTimer(subject.id)}
+          >
+            {subject.isRunning ? "Pausar" : "Iniciar"}
           </button>
         </div>
       ))}
