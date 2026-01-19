@@ -3,4 +3,6 @@ export interface CycleSubject {
   name: string;
   durationMinutes: number;
   color: string;
+  elapsedSeconds: number;
+  isRunning: boolean;
 }
