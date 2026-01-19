@@ -82,6 +82,15 @@ export default function Ciclo() {
   );
   const cycleStatus = totalMinutes > 60 ? "Carga Alta" : "Carga Baixa";
 
+  function handleToggleTimer(id: string) {
+    setSubjects((prev) => {
+      return prev.map((subject) => ({
+        ...subject,
+        isRunning: subject.id === id ? !subject.isRunning : false,
+      }));
+    });
+  }
+
   return (
     <div className=" flex flex-col gap-4">
       <h1>Meu Ciclo</h1>
