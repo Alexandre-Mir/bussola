@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧭 Bússola — Gerenciador de Estudos Sistêmico
 
-## Getting Started
+Bússola é uma plataforma avançada de gestão de estudos, desenhada especificamente para concurseiros que buscam alta performance e organização. O projeto atua como um painel de controle completo, integrando planejamento, execução e análise de desempenho em um fluxo contínuo de aprendizado.
 
-First, run the development server:
+## 🚀 Funcionalidades Principais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Arquitetura de Dashboard:** Interface limpa e intuitiva (Clean UI) com navegação lateral hierárquica e suporte nativo a Dark Mode.
+- **Gestão de Planos de Estudo:** Importação de editais curados, criação manual com parser em tempo real ou migração via planilhas estruturadas.
+- **Ciclo de Estudos:** Geração algorítmica baseada em importância e domínio, ou definição manual de ordem e recorrência.
+- **Trilha Semanal:** Planejamento flexível em quadro semanal com visualização clara do progresso diário.
+- **Registro de Estudos (Logging):** Cronômetro integrado para estudo ao vivo (Pomodoro ou Livre) e ferramenta de registro manual detalhado.
+- **Sistema de Revisões (SRS):** Agendamento automatizado de revisões periódicas com base em intervalos configuráveis.
+- **Edital Verticalizado:** Acompanhamento visual hierárquico por disciplina e tópico, integrando teoria, revisões e questões.
+- **Analytics & Simulados:** Gráficos de horas estudadas, heatmap de constância e controle detalhado de desempenho em simulados (incluindo lógica Cebraspe).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Stack Tecnológica
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto utiliza as tecnologias mais recentes para garantir performance e uma experiência de usuário premium:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Biblioteca UI:** [React 19](https://react.dev/)
+- **Estilização:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Componentes:** [DaisyUI 5](https://daisyui.com/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
 
-## Learn More
+## 📦 Como Começar
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone o repositório:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/Alexandre-Mir/bussola.git
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Instale as dependências:**
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Inicie o servidor de desenvolvimento:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm run dev
+    ```
+
+4.  Acesse `http://localhost:3000` no seu navegador para ver o resultado.
+
+## 🗺️ Roadmap & Blueprint
+
+O desenvolvimento da plataforma é guiado pelo documento [`LMS.md`](./LMS.md), que detalha cada aspecto da arquitetura sistêmica, desde a criação do objeto de estudo até a análise final de trajetória.
+
+---
+
+Projeto desenvolvido com foco em previsibilidade e maximização de desempenho acadêmico.
